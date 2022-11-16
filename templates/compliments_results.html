@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Compliments Results
+{% endblock %}
+
+{% block content %}
+
+<h5>Hello {{users_name}},</h5>
+{% if wants_compliments == 'yes' %}
+    <ul>
+    {% for compliment in user_compliments %}
+        <li>You are {{compliment}}!</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Thank you for stopping by!</p>
+{% endif %}
+
+{% endblock %}
